@@ -6,6 +6,7 @@ import { ArrowDownIcon, ArrowUpIcon, Wallet } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import { LandingPage } from "@/components/landing-page";
 import { auth } from "@clerk/nextjs/server";
+import { SalaryAllocator } from "@/components/salary-allocator";
 
 export default async function DashboardPage() {
   const { userId } = await auth();
@@ -30,7 +31,10 @@ export default async function DashboardPage() {
     <div className="flex flex-col gap-4 p-4 pb-24">
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Dashboard</h1>
-        <UserButton afterSignOutUrl="/" />
+        <div className="flex items-center gap-3">
+          <SalaryAllocator />
+          <UserButton afterSignOutUrl="/" />
+        </div>
       </header>
 
       <div className="grid gap-4 md:grid-cols-2">
