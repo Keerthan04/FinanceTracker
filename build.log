@@ -1,0 +1,38 @@
+
+> finance@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.7 (Turbopack)
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 70ms
+ ✓ Compiled successfully in 9.7s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./app/info/page.tsx
+40:15  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/layout.tsx
+4:35  Warning: 'SignedOut' is defined but never used.  @typescript-eslint/no-unused-vars
+4:46  Warning: 'SignInButton' is defined but never used.  @typescript-eslint/no-unused-vars
+4:60  Warning: 'UserButton' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./app/profile/page.tsx
+1:10  Warning: 'UserButton' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/analytics/forecasting-chart.tsx
+3:84  Warning: 'ReferenceLine' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/bottom-nav.tsx
+12:9  Warning: 'links' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./components/dashboard/sparkline.tsx
+3:57  Warning: 'XAxis' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/transactions/transaction-list.tsx
+53:6  Warning: React Hook useEffect has a missing dependency: 'loadMore'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
