@@ -19,7 +19,12 @@ export function AddTransactionDrawer() {
   }, []);
 
   async function handleSubmit(formData: FormData) {
-    await addTransaction(formData);
+    const result = await addTransaction(formData);
+    if (!result.success) {
+      alert(result.error || "Failed to add transaction");
+      // console.error(result.error); // Optional for debugging
+      return;
+    }
     setOpen(false);
   }
 
